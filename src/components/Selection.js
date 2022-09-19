@@ -1,18 +1,27 @@
-import React,{useState} from "react";
-import '../styles/Child.css'
+import React, { useState } from "react";
+import "../styles/Child.css";
 
 const Selection = (props) => {
-    const[background, setBackground] = useState("")
+  const [nextNewBackground, setBackground] = useState("");
 
-    const backgroundChangeHandler = () => {
-        props.applyColor(setBackground)
-    }
-    
-    // const styleSelection = props.nextBackground
+  const backgroundChangeHandler = () => {
+    // const{nextBackground} = props
+    setBackground(nextNewBackground)
+    props.applyColor(setBackground);
+  };
 
-    return <div onClick={backgroundChangeHandler} className="fix-box" style={{background}}>
-        <h2 className="subheading">Selection</h2>
+  // const styleSelection = props.nextBackground
+  console.log(nextNewBackground);
+
+  return (
+    <div
+      onClick={backgroundChangeHandler}
+      className="fix-box"
+      style={{ background: nextNewBackground }}
+    >
+      <h2 className="subheading">Selection</h2>
     </div>
+  );
 };
 
 export default Selection;
