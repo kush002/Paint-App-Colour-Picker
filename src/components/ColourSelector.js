@@ -3,9 +3,12 @@ import React from 'react';
 const ColourSelector = (props) => {
   const { config, selectNextBackground } = props
   const { background } = config;
+  const nextBackgroundHandler = () => {
+    selectNextBackground(background)
+  }
   return (
-    <button className={/* classname should come here */} onClick={() => selectNextBackground({background: background})}>
-      {/* label should come here */}
+    <button className={props.config.classname} onClick={nextBackgroundHandler}>
+      {props.config.label}
     </button>
   )
 }
