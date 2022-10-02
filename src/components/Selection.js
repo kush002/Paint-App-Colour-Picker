@@ -18,7 +18,7 @@ const Selection = (props) => {
     <div
       className="fix-box"
       onClick={backgroundChangeHandler}
-      style={nextBackground}
+      style={{ background: nextBackground.background }}
     >
       <h2 className="subheading">Selection</h2>
     </div>
