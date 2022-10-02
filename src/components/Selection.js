@@ -7,8 +7,8 @@ const Selection = (props) => {
   const backgroundChangeHandler = () => {
     // const{nextBackground} = props
     //   setBackground(nextNewBackground)
-    console.log(props.applyColor);
-    setBackground(props.applyColor );
+    console.log(props.style);
+    setBackground(props.style);
   };
 
   //   const styleSelection = props.nextBackground;
@@ -18,7 +18,7 @@ const Selection = (props) => {
     <div
       className="fix-box"
       onClick={backgroundChangeHandler}
-      style={{ background: nextBackground}}
+      style={nextBackground}
     >
       <h2 className="subheading">Selection</h2>
     </div>
