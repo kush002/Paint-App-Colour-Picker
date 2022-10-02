@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "../styles/Child.css";
 
 const Selection = (props) => {
-  const [nextBackground, setBackground] = useState({ background: "" });
+  const [nextBackground, setBackground] = useState({});
 
   const backgroundChangeHandler = () => {
     // const{nextBackground} = props
     //   setBackground(nextNewBackground)
+    console.log(props.applyColor);
     setBackground(props.applyColor);
   };
 
@@ -17,7 +18,7 @@ const Selection = (props) => {
     <div
       className="fix-box"
       onClick={backgroundChangeHandler}
-      style={{ background: nextBackground }}
+      style={nextBackground}
     >
       <h2 className="subheading">Selection</h2>
     </div>

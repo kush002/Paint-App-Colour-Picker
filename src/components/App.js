@@ -31,7 +31,7 @@ const App = () => {
   let [nextBackground, selectNextBackground] = useState({ background: "" });
   const applyColor = (updateSelectionStyle) => {
     // console.log(updateSelectionStyle);
-    selectNextBackground(updateSelectionStyle);
+    selectNextBackground({ background: updateSelectionStyle });
   };
   console.log(nextBackground);
   return (
